@@ -1,0 +1,99 @@
+
+.card {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.87);
+    background: #eeeeee;
+    box-shadow: none;
+}
+
+.card .card-content {
+    padding: 15px 20px;
+    position: relative;
+    background: inherit;
+}
+
+.card .card-content .category {
+    margin-bottom: 0;
+}
+
+.card-title,
+.card-title a {
+    color: #3C4858;
+    text-decoration: none;
+}
+
+.card-blog .card-title {
+    font-weight: 700;
+}
+
+.card-plain .icon i,
+.card-plain .card-title {
+    color: #FFFFFF;
+}
+
+.card .card-title {
+    margin-top: 0;
+    font-weight: 900;
+    margin-bottom: 3px;
+    color: black;
+}
+
+.card .card-title:not(.card-calendar .card-title) {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.card .card-image .card-title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    font-size: 1.3em;
+    text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+}
+
+.card .card-header.card-header-icon+.card-content .card-title {
+    padding-bottom: 15px;
+}
+
+.card [data-background-color] .card-title {
+    color: #FFFFFF;
+}
+
+.card-stats .card-title {
+    margin: 0;
+}
+
+.card-testimonial .card-description+.card-title {
+    margin-top: 30px;
+}
+
+.card-pricing .card-title {
+    margin-top: 30px;
+}
+
+.card-background .card-title {
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.card-product .card-title,
+.card-product .category,
+.card-product .card-description {
+    text-align: center;
+}
+
+.card-login .card-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.pos .order .summary .line .subentry_taxes{
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+}

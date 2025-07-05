@@ -1,0 +1,524 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_ar_pos_odoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20201203\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 16:11+0000\n"
+"PO-Revision-Date: 2021-03-09 16:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.actions.act_window,name:l10n_ar_pos_odoo.afip_pos_relation_action
+msgid "AFIP POS Parameters"
+msgstr "AFIP POS Parametros"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.ui.menu,name:l10n_ar_pos_odoo.afip_pos_relation_menu
+msgid "AFIP POS Relations"
+msgstr "AFIP POS Relaciones"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model,name:l10n_ar_pos_odoo.model_afip_pos_relation
+msgid "AFIP POS relation"
+msgstr "AFIP POS relaciones"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_pos_config_afip_relation_ids
+#: model:ir.ui.view,arch_db:l10n_ar_pos_odoo.l10n_ar_pos_retail
+msgid "AFIP Relations"
+msgstr "AFIP Relaciones"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:73
+#, python-format
+msgid "AFIP Responsibility"
+msgstr "Responsabilidad ante AFIP"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,help:l10n_ar_pos_odoo.field_pos_config_refund_journal_id
+msgid "Accounting journal used to create refunds."
+msgstr "Diario contable utilizado para crear reembolsos."
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:13
+#, python-format
+msgid "Address"
+msgstr "Dirección"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:64
+#, python-format
+msgid "Allow Duplicate"
+msgstr "Permitir Duplciado?"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:394
+#, python-format
+msgid "An error occurred when sending invoice to FP"
+msgstr "Ocurrió un error al enviar la factura a FP"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model,name:l10n_ar_pos_odoo.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Línea de extracto bancario"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/credit_card_popup.xml:18
+#, python-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model,name:l10n_ar_pos_odoo.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/credit_card_popup.xml:15
+#, python-format
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model,name:l10n_ar_pos_odoo.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.ui.view,arch_db:l10n_ar_pos_odoo.l10n_ar_view_pos_session_form
+msgid "Continue Selling"
+msgstr "Continuar venta"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/js/screen_payment.js:164
+#, python-format
+msgid "Credit Card Info"
+msgstr "Informacion de Tarjeta de Crédito"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:11
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:60
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:61
+#, python-format
+msgid "Document Number"
+msgstr "Numero de Documento"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:10
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:49
+#, python-format
+msgid "Document Type"
+msgstr "Tipo de documento"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:78
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:246
+#, python-format
+msgid "Document type not found for FP Client Data"
+msgstr "El tipo de documento del cliente no se encuentra dentro de la FP"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:75
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:243
+#, python-format
+msgid "Equivalent Document type not found for FP Client Data"
+msgstr "El tipo de documento del cliente no tiene un equivalente en la FP"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:87
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:255
+#, python-format
+msgid "Equivalent Responsibility not found for FP Client Data"
+msgstr "La responsabilidad del cliente no tiene un equivalente en la FP"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:122
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:290
+#, python-format
+msgid "Equivalent Tax not found for FP Print Item"
+msgstr "El impuesto del item no tiene un equivalente en la FP"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:155
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:320
+#, python-format
+msgid "Equivalent UOM code not found for FP Print Item"
+msgstr "El codigo de la unidad de medida no tiene un equivalente en la FP"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:98
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:99
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:266
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:267
+#, python-format
+msgid "FP Journal Type not defined for account journal %s"
+msgstr "FP Tipo de diario no definido para el diario de la cuenta %s"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:142
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:149
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:156
+#, python-format
+msgid "Function not implemented in POSBox"
+msgstr "Función no implementada en POSBox"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:214
+#, python-format
+msgid "Get Fiscal Printer Error Log"
+msgstr "Obtener el registro de errores de la impresora fiscal"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:9
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_id
+#, python-format
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:201
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:401
+#, python-format
+msgid "Invoice %s not found."
+msgstr "No se encontro el Ticket/Factura %s ."
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:198
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:397
+#, python-format
+msgid "Invoice %s search failed."
+msgstr "Fallo la busqueda del ticket/Factura %s ."
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:363
+#, python-format
+msgid "Invoice not found."
+msgstr "No se encontro el ticket/Factura."
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model,name:l10n_ar_pos_odoo.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/credit_card_popup.xml:13
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_account_bank_statement_line_device_lot_nbr
+#, python-format
+msgid "Lot Number"
+msgstr "Numero de lote"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_res_company_max_ticket_amount
+msgid "Max Ticket Amount Retail"
+msgstr "Tope de facturacion para CF"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:256
+#, python-format
+msgid "Method not supported [%s] not in [GET, POST, PUT, PATCH or DELETE]!"
+msgstr "Method not supported [%s] not in [GET, POST, PUT, PATCH or DELETE]!"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:18
+#, python-format
+msgid "Mobile"
+msgstr "Móvil"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:12
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_name
+#, python-format
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.ui.view,arch_db:l10n_ar_pos_odoo.l10n_ar_view_pos_config_kanban
+msgid "New Session"
+msgstr "Nueva sesión"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:51
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:75
+#, python-format
+msgid "None"
+msgstr "Ninguno"
+
+#. module: l10n_ar_pos_odoo
+#: sql_constraint:afip.pos.relation:0
+msgid "Not configuration!"
+msgstr "No configurado!"
+
+#. module: l10n_ar_pos_odoo
+#: sql_constraint:afip.pos.relation:0
+msgid "Not repeat name!"
+msgstr "No repetir nombres!"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.ui.view,arch_db:l10n_ar_pos_odoo.l10n_ar_view_pos_config_kanban
+#: model:ir.ui.view,arch_db:l10n_ar_pos_odoo.l10n_ar_view_pos_session_form
+msgid "Open Session"
+msgstr "Abrir sesión"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_pos_order_amount_other_tax
+msgid "Other Taxes"
+msgstr "Otros impuestos"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_order_l10n_ar.xml:6
+#, python-format
+msgid "Other Taxes:"
+msgstr "Otros impuestos:"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:46
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:380
+#, python-format
+msgid "POS Config %s not found."
+msgstr "No se encontró la configuración POS %s ."
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_pos_journal_id
+msgid "POS Journal"
+msgstr "POS Diario"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_pos_refund_journal_id
+msgid "POS Return Journal"
+msgstr "POS Diario de Reembolso"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:116
+#, python-format
+msgid "POSBox error {}"
+msgstr "POSBox error {}"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:15
+#, python-format
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/pos_order.py:110
+#, python-format
+msgid "Please provide a partner for the sale."
+msgstr "Por favor indique una empresa para la venta."
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model,name:l10n_ar_pos_odoo.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Pedidos del Punto de Venta"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/js/pos_fiscal_printer.js:131
+#, python-format
+msgid "Printing Error"
+msgstr "Imprmir error"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/js/pos_fiscal_printer.js:169
+#, python-format
+msgid "Printing Error: "
+msgstr "Imprimiendo error: "
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_pos_config_refund_journal_id
+#: model:ir.ui.view,arch_db:l10n_ar_pos_odoo.l10n_ar_pos_retail
+msgid "Refund Journal"
+msgstr "Diario de reembolso"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:90
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:119
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:135
+#, python-format
+msgid "Remote Address not defined"
+msgstr "Dirección remota no definida"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:42
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:53
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:64
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:75
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:168
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:182
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:225
+#, python-format
+msgid "Remote Address not defined."
+msgstr "Dirección remota no definida."
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_afip_pos_relation_responsibility_id
+msgid "Responsibility"
+msgstr "Responsabilidad"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:90
+#: code:addons/l10n_ar_pos_odoo/models/invoice.py:258
+#, python-format
+msgid "Responsibility not found for FP Client Data"
+msgstr "La responsabilidad del cliente no se encontro en la FP"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.ui.view,arch_db:l10n_ar_pos_odoo.l10n_ar_view_pos_config_kanban
+msgid "Resume"
+msgstr "Reanudar"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/js/screen_payment.js:132
+#, python-format
+msgid "Se emitirá Comprobante sin Valor Fiscal"
+msgstr "Se emitirá Comprobante sin Valor Fiscal"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/fiscal_printer.py:273
+#, python-format
+msgid "Something went wrong with your request to POSBox"
+msgstr "Algo salió mal con su solicitud a POSBox"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/pos_order.py:83
+#, python-format
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/pos_order.py:139
+#, python-format
+msgid "This invoice has been created from the point of sale session: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+msgstr "Esta factura se ha creado desde la sesión del punto de venta: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/credit_card_popup.xml:10
+#: model:ir.model.fields,field_description:l10n_ar_pos_odoo.field_account_bank_statement_line_device_ticket_nbr
+#, python-format
+msgid "Ticket Number"
+msgstr "Número de Ticket"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/js/screen_payment.js:184
+#, python-format
+msgid "Total Amount exceeds max limit granted by AFIP for CF."
+msgstr "La cantidad total excede el límite máximo otorgado por AFIP para CF."
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/js/screen_payment.js:183
+#, python-format
+msgid "Total amount error."
+msgstr "Error en Monto total."
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/js/screen_payment.js:131
+#, python-format
+msgid "Warning"
+msgstr "Advertencia"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/pos_session.py:41
+#, python-format
+msgid "You cannot confirm all orders of this session, because they have not the 'paid' status.\n"
+"{reference} is in state {state}, total amount: {total}, paid: {paid}"
+msgstr "No se pueden confirmar todos los pedidos de esta sesión porque no tienen el estado de \"pagado\".\n"
+"{reference} está en estado {state}. Importe total: {total}. Pagado: {paid}"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/pos_session.py:31
+#, python-format
+msgid "You have to set a Sale Journal for the POS:%s"
+msgstr "Debe establecer un diario de venta para el PdV:%s"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/account_journal.py:33
+#, python-format
+msgid "checking payment journal id %s"
+msgstr "Chequeando el id del metodo de pago %s"
+
+#. module: l10n_ar_pos_odoo
+#: code:addons/l10n_ar_pos_odoo/models/account_journal.py:37
+#, python-format
+msgid "found payment journal %s, is electronic? %s"
+msgstr "diario de pagos encontrado %s, ¿es electrónico? %s"
+
+#. module: l10n_ar_pos_odoo
+#. openerp-web
+#: code:addons/l10n_ar_pos_odoo/static/src/xml/screen_client_l10n_ar.xml:84
+#, python-format
+msgid "is Customer"
+msgstr "Es Cliente?"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model,name:l10n_ar_pos_odoo.model_pos_config
+msgid "pos.config"
+msgstr "pos.config"
+
+#. module: l10n_ar_pos_odoo
+#: model:ir.model,name:l10n_ar_pos_odoo.model_pos_session
+msgid "pos.session"
+msgstr "pos.session"
+

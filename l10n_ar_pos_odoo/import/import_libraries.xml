@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="l10n_ar_pos_odoo_assets" name="l10n_ar_pos_auto_invoice assets" inherit_id="point_of_sale.assets">
+        <xpath expr="script[last()]" position="after">
+<!--            <link rel="stylesheet" href="/l10n_ar_pos_odoo/static/src/css/core.css"/>-->
+            <script type="text/javascript" src="/l10n_ar_pos_odoo/static/src/js/database.js"/>
+            <script type="text/javascript" src="/l10n_ar_pos_odoo/static/src/js/model.js"/>
+            <script type="text/javascript" src="/l10n_ar_pos_odoo/static/src/js/order.js"/>
+            <script type="text/javascript" src="/l10n_ar_pos_odoo/static/src/js/order_line.js"/>
+<!--            <script type="text/javascript" src="/l10n_ar_pos_odoo/static/src/js/screen_order.js"/>-->
+<!--            <script type="text/javascript" src="/l10n_ar_pos_odoo/static/src/js/screen_payment.js"/>-->
+<!--            <script type="text/javascript" src="/l10n_ar_pos_odoo/static/src/js/credit_card_popup.js"/>-->
+        </xpath>
+    </template>
+</odoo>
