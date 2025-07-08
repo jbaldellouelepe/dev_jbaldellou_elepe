@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="l10n_ar_pos_retail">
+            <field name="name">pos.config.l10n_ar</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="inside">
+                    <notebook>
+                       <page string="AFIP Relations" name="afip_relations">
+                            <field name="afip_relation_ids"/>
+                       </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

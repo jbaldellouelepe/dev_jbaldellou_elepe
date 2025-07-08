@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="ClientListScreenWidget">
+        <t t-jquery="table[class*='client-list']" t-operation="replace">
+            <table class='client-list'>
+                <thead>
+                    <tr>
+                        <th><a href="#" class="sort sort_by_id">ID</a><i class="fa fa-sort"/></th>
+                        <th>Document Type<i class="fa"/></th>
+                        <th>Document Number<i class="fa"/></th>
+                        <th><a href="#" class="sort sort_by_name">Name</a><i class="fa fa-sort"/></th>
+                        <th><a href="#" class="sort sort_by_address">Address</a><i class="fa fa-sort"/></th>
+                        <t t-if="!widget.pos.config.hide_phone">
+                            <th><a href="#" class="sort sort_by_phone">Phone</a><i class="fa fa-sort"/></th>
+                        </t>
+                        <t t-if="!widget.pos.config.hide_mobile">
+                            <th><a href="#" class="sort sort_by_mobile">Mobile</a><i class="fa fa-sort"/></th>
+                        </t>
+                    </tr>
+                </thead>
+                <tbody class='client-list-contents'>
+                </tbody>
+            </table>
+        </t>
+    </t>
+
+     <t t-extend="ClientLine">
+        <t t-jquery="tr[class*='client-line']" t-operation="replace">
+            <tr class='client-line' t-att-data-id='partner.id'>
+                <td><t t-esc='partner.id' /></td>
+                <td><t t-esc='partner.document_type_id[1]' /></td>
+                <td><t t-esc='partner.document_number' /></td>
+                <td><t t-esc='partner.name' /></td>
+                <td><t t-esc='partner.address' /></td>
+                <t t-if="!widget.pos.config.hide_phone">
+                    <td><t t-esc='partner.phone or ""' /></td>
+                </t>
+                <t t-if="!widget.pos.config.hide_mobile">
+                    <td><t t-esc='partner.mobile or ""' /></td>
+                </t>
+            </tr>
+        </t>
+    </t>
+
+    <t t-extend="ClientDetailsEdit">
+        <t t-jquery="div[class*='client-details-left']" t-operation="append">
+            <div class='client-detail'>
+                <span class='label'>Document Type</span>
+                <select class='detail client-address-country needsclick' name='document_type_id'>
+                    <option value=''>None</option>
+                    <t t-foreach='widget.pos.document_types' t-as='document_type'>
+                        <option t-att-value='document_type.id' t-att-selected="partner.document_type_id ? ((document_type.id === partner.document_type_id[0]) ? true : undefined) : undefined">
+                            <t t-esc='document_type.name'/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+            <div class='client-detail'>
+                <span class='label'>Document Number</span>
+                <input class='detail client-address-street' name='document_number'       t-att-value='partner.document_number || ""' placeholder='Document Number'></input>
+            </div>
+            <div class='client-detail'>
+                <span class='label'>Allow Duplicate</span>
+                <input class="detail opt_out"
+                       type="checkbox" name="duplicate_partner"
+                       t-att-checked="(partner.duplicate_partner ? true : undefined)"
+                       t-att-value='(partner.duplicate_partner ? true : false)'/>
+            </div>
+        </t>
+        <t t-jquery="div[class*='client-details-right']" t-operation="append">
+            <div class='client-detail'>
+                <span class='label'>AFIP Responsibility</span>
+                <select class='detail client-address-country needsclick' name='responsibility_id'>
+                    <option value=''>None</option>
+                    <t t-foreach='widget.pos.afip_responsibilities' t-as='responsibility'>
+                        <option t-att-value='responsibility.id' t-att-selected="partner.responsibility_id ? ((responsibility.id === partner.responsibility_id[0]) ? true : undefined) : undefined">
+                            <t t-esc='responsibility.name'/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+            <div class='client-detail'>
+                <span class='label'>is Customer</span>
+                <input class="detail opt_out"
+                       type="checkbox" name="customer"
+                       t-att-checked="(partner.customer ? true : undefined)"
+                       t-att-value='(partner.customer ? true : false)'/>
+            </div>
+        </t>
+    </t>
+</templates>

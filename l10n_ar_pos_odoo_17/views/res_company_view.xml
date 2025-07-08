@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+   <record model="ir.ui.view" id="res_company_afip_pos">
+       <field name= "name">AFIP extension for Company</field>
+       <field name="model">res.company</field>
+       <field name="inherit_id" ref="base.view_company_form"/>
+       <field name="arch" type="xml">
+         <field name="company_registry" position="after">
+            <field name="max_ticket_amount"/>
+            <field name="max_ticket_electronic_amount"/>
+         </field>
+       </field>
+    </record>
+    </data>
+</odoo>
