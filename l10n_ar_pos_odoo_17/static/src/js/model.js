@@ -1,8 +1,12 @@
-import { patch } from '@web/core/utils/patch';
-import { PosModel } from 'point_of_sale.models';
+/** @odoo-module **/
 
-patch(PosModel.prototype, 'l10n_ar_pos_odoo.model', {
-    initialize() {
+import { patch } from '@web/core/utils/patch';
+import { PosStore } from '@point_of_sale/app/store/pos_store';
+
+patch(PosStore.prototype, {
+    // @Override
+    async setup() {
+        // Tu lógica personalizada
         this.pos_relation_by_id = {};
         this.journal_index = {};
         this.journal_by_responsibility = {};
@@ -11,59 +15,44 @@ patch(PosModel.prototype, 'l10n_ar_pos_odoo.model', {
         this.repartition_lines_by_id = {};
         this.tags = [];
         this.tags_by_id = {};
-        this._super(...arguments);
+        await super.setup(...arguments);
+
+        console.log('✅ PosStore patch setup ejecutado correctamente');
     },
 
     _compute_all(tax, base_amount, quantity, price_exclude) {
-        let tax_amount = this._super(...arguments);
-        console.log('tax amount computed', tax_amount);
-
+        const superMethod = Object.getPrototypeOf(PosStore.prototype)._compute_all;
+        let tax_amount = superMethod?.call(this, tax, base_amount, quantity, price_exclude);
         const price_include = price_exclude === undefined ? tax.price_include : !price_exclude;
 
         if (tax.amount_type === 'partner_tax') {
             if (!price_include) {
-                console.log('computing partner tax');
                 tax_amount = (base_amount * tax.amount).toFixed(2);
-                console.log('tax amount computed', tax_amount);
-                return tax_amount;
-            }
-            if (price_include) {
-                console.log('computing partner tax');
+            } else {
                 tax_amount = (base_amount - (base_amount / (1 + tax.amount))).toFixed(2);
-                console.log('tax amount computed', tax_amount);
-                return tax_amount;
             }
-        } else {
             return tax_amount;
         }
-        return false;
+        return tax_amount;
     },
 
-    get_taxes_after_fp(taxes_ids, order = false) {
-        const taxes = this.taxes;
-        let product_taxes = [];
-
-        taxes_ids.forEach((el) => {
-            const tax = taxes.find(t => t.id === el);
-            product_taxes.push(...this._map_tax_fiscal_position(tax, order));
-        });
-
-        const client = this.get_order()?.get_client();
-
-        if (client && this.partner_taxes_by_id?.[client.id]) {
-            this.partner_taxes_by_id[client.id].forEach((partner_tax) => {
-                const tax = taxes.find(t => t.id === partner_tax.id);
-                if (tax) {
-                    tax.amount = partner_tax.amount;
-                    product_taxes.push(...this._map_tax_fiscal_position(tax, order));
-                }
-            });
+    _map_tax_fiscal_position(tax, order = false) {
+        if (!tax || !tax.fiscal_position_ids || !tax.fiscal_position_ids.length) {
+            return [tax];
         }
 
-        // Unique taxes by id
-        product_taxes = [...new Map(product_taxes.map(tax => [tax.id, tax])).values()];
+        const order_fp = order?.get_fiscal_position?.();
+        const fiscal_position_id = order_fp?.id;
 
-        console.log('product taxes', product_taxes);
-        return product_taxes;
+        if (!fiscal_position_id) {
+            return [tax];
+        }
+
+        const mapping = this.fiscal_positions_map?.[fiscal_position_id]?.[tax.id];
+        if (!mapping) {
+            return [tax];
+        }
+
+        return mapping.map(t => this.taxes_by_id[t]);
     },
 });

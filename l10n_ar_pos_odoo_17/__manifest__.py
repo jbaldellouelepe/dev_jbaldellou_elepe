@@ -26,12 +26,13 @@
         'static/src/xml/credit_card_popup.xml',
     ],
     'assets': {
-        'point_of_sale.assets': [
+        'point_of_sale._assets_pos': [
             'l10n_ar_pos_odoo/static/src/js/database.js',
-            'l10n_ar_pos_odoo/static/src/js/model.js',
             'l10n_ar_pos_odoo/static/src/js/order.js',
+            'l10n_ar_pos_odoo/static/src/js/order_line.js',
+            'l10n_ar_pos_odoo/static/src/js/model.js',
             #'l10n_ar_pos_odoo/static/src/js/payment_line.js',
-            #'l10n_ar_pos_odoo/static/src/js/screen_order.js',
+            'l10n_ar_pos_odoo/static/src/js/screen_order.js',
             #'l10n_ar_pos_odoo/static/src/js/screen_payment.js',
         ],
     },

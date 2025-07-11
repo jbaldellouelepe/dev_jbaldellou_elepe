@@ -1,11 +1,16 @@
-import { patch } from '@web/core/utils/patch';
-import { Paymentline } from 'point_of_sale.models';
+/** @odoo-module **/
 
-patch(Paymentline.prototype, 'l10n_ar_pos_odoo.payment_line', {
-    initialize(attributes, options) {
+import { patch } from '@web/core/utils/patch';
+import { registry } from '@web/core/registry/store';
+
+// Accedemos al modelo de Paymentline desde el registry
+const paymentLineModel = registry.category('models').get('payment_line');
+
+patch(paymentLineModel.model.prototype, {
+    setup(attributes, options) {
+        super.setup?.(attributes, options);
         this.device_ticket_nbr = null;
         this.device_lot_nbr = null;
-        this._super(...arguments);
     },
 
     set_ticket_nbr(value) {
@@ -27,7 +32,7 @@ patch(Paymentline.prototype, 'l10n_ar_pos_odoo.payment_line', {
     },
 
     export_as_JSON() {
-        const json = this._super(...arguments);
+        const json = super.export_as_JSON(...arguments);
         if (this.device_ticket_nbr) {
             json.device_ticket_nbr = this.device_ticket_nbr;
         }
@@ -38,7 +43,7 @@ patch(Paymentline.prototype, 'l10n_ar_pos_odoo.payment_line', {
     },
 
     export_for_printing() {
-        const json = this._super(...arguments);
+        const json = super.export_for_printing(...arguments);
         if (this.device_ticket_nbr) {
             json.device_ticket_nbr = this.device_ticket_nbr;
         }

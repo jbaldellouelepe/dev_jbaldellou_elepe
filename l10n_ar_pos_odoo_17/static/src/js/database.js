@@ -1,8 +1,10 @@
-import { patch } from '@web/core/utils/patch';
-import { PosDB } from 'point_of_sale.DB';
-import { unaccent } from 'web.utils';
+/** @odoo-module **/
 
-patch(PosDB.prototype, 'l10n_ar_pos_odoo.database', {
+import { patch } from '@web/core/utils/patch';
+import { PosDB } from "@point_of_sale/app/store/db";
+import { unaccent } from "@web/core/utils/strings";
+
+patch(PosDB.prototype, {
     init(options) {
         this._super(...arguments);
         this.responsibility_by_id = {};

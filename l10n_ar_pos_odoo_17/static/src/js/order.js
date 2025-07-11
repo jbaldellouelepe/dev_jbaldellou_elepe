@@ -1,9 +1,11 @@
-import { patch } from '@web/core/utils/patch';
-import { Order } from 'point_of_sale.models';
+/** @odoo-module **/
 
-patch(Order.prototype, 'l10n_ar_pos_odoo.order', {
+import { Order } from "@point_of_sale/app/store/models";
+import { patch } from '@web/core/utils/patch';
+
+patch(Order.prototype, {
     export_as_JSON() {
-        const json = this._super(...arguments);
+        const json = super.export_as_JSON(...arguments);
         console.log('order to export', json);
         // si querés agregar más campos al json, hacelo acá
         return json;
@@ -12,7 +14,7 @@ patch(Order.prototype, 'l10n_ar_pos_odoo.order', {
     // Si querés descomentar y usar más métodos, podés agregar acá.
     /*
     init_from_JSON(json) {
-        const res = this._super(...arguments);
+        const res = super.init_from_JSON(...arguments);
         if (json.auto_register_payment) {
             this.auto_register_payment = json.auto_register_payment;
         }
