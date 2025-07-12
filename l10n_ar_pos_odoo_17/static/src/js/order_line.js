@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
-import { patch } from '@web/core/utils/patch';
 import { Orderline } from "@point_of_sale/app/store/models";
+import { patch } from '@web/core/utils/patch';
 
 patch(Orderline.prototype, {
     get_all_prices() {
@@ -37,7 +37,7 @@ patch(Orderline.prototype, {
         for (const id of taxes_ids) {
             const tax = this.pos.taxes_by_id[id];
             if (tax) {
-                product_taxes.push(...this.pos._map_tax_fiscal_position(tax, this.order));
+                product_taxes.push(...this._map_tax_fiscal_position(tax, this.order));
             }
         }
 
@@ -48,7 +48,7 @@ patch(Orderline.prototype, {
                 const tax = this.pos.taxes_by_id[partner_tax.id];
                 if (tax) {
                     tax.amount = partner_tax.amount;
-                    product_taxes.push(...this.pos._map_tax_fiscal_position(tax, this.order));
+                    product_taxes.push(...this._map_tax_fiscal_position(tax, this.order));
                 }
             }
         }

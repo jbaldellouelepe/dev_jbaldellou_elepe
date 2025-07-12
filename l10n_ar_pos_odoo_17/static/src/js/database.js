@@ -1,14 +1,15 @@
 /** @odoo-module **/
 
-import { patch } from '@web/core/utils/patch';
 import { PosDB } from "@point_of_sale/app/store/db";
+import { patch } from '@web/core/utils/patch';
 import { unaccent } from "@web/core/utils/strings";
 
 patch(PosDB.prototype, {
-    init(options) {
-        this._super(...arguments);
+    setup() {
+        this.product_unit_of_measure = {};
         this.responsibility_by_id = {};
         this.partner_by_doc_number = {};
+        console.log('PosDB(setup) loaded - database.js');
     },
 
     _partner_search_string(partner) {
@@ -98,16 +99,16 @@ patch(PosDB.prototype, {
         return updated_count;
     },
 
-    add_responsibilities(responsibilities) {
-        let updated_count = 0;
-        let responsibility;
-        for (let i = 0, len = responsibilities.length; i < len; i++) {
-            responsibility = responsibilities[i];
-            this.responsibility_by_id[responsibility.id] = responsibility;
-            updated_count += 1;
-        }
-        return updated_count;
-    },
+//    add_responsibilities(responsibilities) {
+//        let updated_count = 0;
+//        let responsibility;
+//        for (let i = 0, len = responsibilities.length; i < len; i++) {
+//            responsibility = responsibilities[i];
+//            this.responsibility_by_id[responsibility.id] = responsibility;
+//            updated_count += 1;
+//        }
+//        return updated_count;
+//    },
 
     get_partner_by_doc_number(document_number) {
         return this.partner_by_doc_number[document_number];
@@ -115,5 +116,17 @@ patch(PosDB.prototype, {
 
     get_responsibility_by_id(responsibility) {
         return this.responsibility_by_id[responsibility];
+    },
+
+//    add_responsibilities(responsibilities) {
+//        this.afip_responsibilities = responsibilities;
+//    },
+
+    add_responsibilities(responsibilities) {
+        this.responsibility_by_id = {};
+        for (const r of responsibilities) {
+            this.responsibility_by_id[r.id] = r;
+        }
+        console.log("✅ PosDB.add_responsibilities ejecutado");
     },
 });
